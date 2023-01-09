@@ -10,7 +10,7 @@ Books.forEach((Books) => {
         <p>
         ${Books.author}
         </p>
-        <button onclick="removeBook(${Books.title}, ${Books.author})">Remove</button>
+        <button class="remove">Remove</button>
         <hr>
         `;
     bookList.innerHTML += book;
@@ -41,13 +41,12 @@ function addBook() {
     
   }
 
-  function removeBook(title, author) {
-    for (let i = 0; i < Books.length; i++)
-        if (Books[i].title == title & Books[i].author == author)
-        {
-            Books.splice(i, 1);
-        }
-  }
+ 
+      const removebtn = document.querySelectorAll(".remove");
+      removebtn.forEach((element,i) => element.addEventListener("click", ()=> {
+        Books.splice(i, 1);
+        localStorage.setItem('Books', JSON.stringify(Books))
+        location.reload()
+      })) 
 
 addButton.addEventListener('click', addBook);
-
