@@ -30,7 +30,7 @@ function addBook() {
     localStorage.setItem('Books', JSON.stringify(Books));
     formAuthor.value = '';
     formTitle.value = '';
-    location.reload();
+    window.location.reload();
   }
 }
 
@@ -38,7 +38,7 @@ const removebtn = document.querySelectorAll('.remove');
 removebtn.forEach((element, i) => element.addEventListener('click', () => {
   Books.splice(i, 1);
   localStorage.setItem('Books', JSON.stringify(Books));
-  location.reload();
+  window.location.reload();
 }));
 
 addButton.addEventListener('click', addBook);
