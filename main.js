@@ -3,7 +3,7 @@ const bookList = document.createElement('section');
 bookList.className = 'book-list';
 
 Books.forEach((Books) => {
-    const book = `
+  const book = `
         <p>
         ${Books.title}
         </p>
@@ -13,7 +13,7 @@ Books.forEach((Books) => {
         <button class="remove">Remove</button>
         <hr>
         `;
-    bookList.innerHTML += book;
+  bookList.innerHTML += book;
 });
 
 document.body.insertBefore(bookList, document.body.children[1]);
@@ -21,32 +21,24 @@ document.body.insertBefore(bookList, document.body.children[1]);
 const addButton = document.querySelector('#add-book');
 
 function addBook() {
-    let formTitle = document.querySelector('#title');
+  const formTitle = document.querySelector('#title');
 
-    let formAuthor = document.querySelector('#author');
-    if (!formAuthor.value || !formTitle.value)
-    {
-        return;
-    }
+  const formAuthor = document.querySelector('#author');
+  if (formAuthor.value && formTitle.value) {
+    Books.push({ title: formTitle.value, author: formAuthor.value });
 
-    else
-    {
-        Books.push({title: formTitle.value, author: formAuthor.value });
-
-        localStorage.setItem('Books', JSON.stringify(Books));
-        formAuthor.value = '';
-        formTitle.value = '';
-        location.reload()
-    }
-    
+    localStorage.setItem('Books', JSON.stringify(Books));
+    formAuthor.value = '';
+    formTitle.value = '';
+    location.reload();
   }
+}
 
- 
-      const removebtn = document.querySelectorAll(".remove");
-      removebtn.forEach((element,i) => element.addEventListener("click", ()=> {
-        Books.splice(i, 1);
-        localStorage.setItem('Books', JSON.stringify(Books))
-        location.reload()
-      })) 
+const removebtn = document.querySelectorAll('.remove');
+removebtn.forEach((element, i) => element.addEventListener('click', () => {
+  Books.splice(i, 1);
+  localStorage.setItem('Books', JSON.stringify(Books));
+  location.reload();
+}));
 
 addButton.addEventListener('click', addBook);
