@@ -1,6 +1,4 @@
 const Books = JSON.parse(localStorage.getItem('Books')) || [];
-
-
 const bookList = document.createElement('section');
 bookList.className = 'book-list';
 
@@ -38,7 +36,9 @@ function addBook() {
         localStorage.setItem('Books', JSON.stringify(Books));
         formAuthor.value = '';
         formTitle.value = '';
+        location.reload()
     }
+    
   }
 
   function removeBook(title, author) {
