@@ -1,33 +1,45 @@
 const Books = [
   {
-    title: "",
-    author: "",
+    title: "Harry potter 1",
+    author: "Hawkings",
   },
   {
-    title: "",
-    author: "",
+    title: "Principia de mathimatica",
+    author: "Isaac Newton",
   },
   {
-    title: "",
-    author: "",
+    title: "Book 3",
+    author: "Author 3",
   },
   {
-    title: "",
-    author: "",
+    title: "Book 4",
+    author: "Author 4",
   },
   {
-    title: "",
-    author: "",
+    title: "Book 5",
+    author: "Author",
   },
 ];
+
+const storedBooks = localStorage.getItem('Books')
+
+if (storedBooks)
+{
+    Books = JSON.parse('storedBooks');
+}
+else
+{
+    const storeBooks = JSON.stringify(Books);
+    localStorage.setItem(Books, storeBooks);
+}
 
 const bookList = document.querySelector(".book-list");
 
 Books.forEach((Books) => {
   const book = `
-      <h5>
+      <p>
       ${Books.title}
-      </h5>
+      </p>
       <p>
       ${Books.author}
       </p>
@@ -39,3 +51,17 @@ Books.forEach((Books) => {
 
 document.bookList.insertBefore(bookList, document.bookList.children[0]);
 
+const formTitle = document.querySelector('#title');
+
+const formAuthor = document.querySelector('#author');
+
+const addButton = document.querySelector('#add-book');
+
+function addBook(title, author) {
+    Books.push({title: title, author: author });
+  }
+
+
+
+
+addButton.addEventListener('click', addBook(formTitle.value, formAuthor.value));
