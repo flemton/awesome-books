@@ -88,11 +88,11 @@ Install this project with:
 
 👤 **Osman Alhassan**
 
-- GitHub: [@githubhandle]([https://github.com/flemton)]
+- GitHub: [@flemton]([https://github.com/flemton])
 
 👤 **Sajib Arafat Siddiqui**
 
-- GitHub: [@githubhandle](https://github.com/sajibarafatsiddiqui)
+- GitHub: [@sajibarafatsiddiqui](https://github.com/sajibarafatsiddiqui)
 
 ## 🔭 Future Features <a name="future-features"></a>
 
