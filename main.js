@@ -49,7 +49,7 @@ Books.forEach((Books) => {
   bookList.innerHTML += book;
 });
 
-document.bookList.insertBefore(bookList, document.bookList.children[0]);
+bookList.insertBefore(bookList, bookList.children[0]);
 
 const formTitle = document.querySelector('#title');
 
@@ -58,6 +58,7 @@ const formAuthor = document.querySelector('#author');
 const addButton = document.querySelector('#add-book');
 
 function addBook(title, author) {
+    console.log(title)
     Books.push({title: title, author: author });
   }
 
