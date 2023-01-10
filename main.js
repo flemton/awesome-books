@@ -4,12 +4,9 @@ bookList.className = 'book-list';
 
 Books.forEach((Books) => {
   const book = `
-  <div>
+  <div class="bookContainer">
         <p>
-        ${Books.title}
-        </p>
-        <p>
-        ${Books.author}
+        ${Books.title} By ${Books.author}
         </p>
         <button class="remove">Remove</button>
         <hr>
@@ -46,10 +43,19 @@ class Book {
 }
 
 static removeBook(e){
-  console.log(e.target.parentNode)
+  const bookTitle=(e.target.parentNode.children[0].innerHTML).split('By')[0].trim()
+  const bookAuthor =(e.target.parentNode.children[0].innerHTML).split('By')[1].trim()
+  for(let i=0;i<Books.length;i++){
+  {if (Books[i].title == bookTitle && Books[i].author == bookAuthor){
+Books.splice(i,1);
+localStorage.setItem('Books', JSON.stringify(Books));
+  window.location.reload();
+  break;
+  }}
+}
 }
 
 }
 addButton.addEventListener('click', Book.addBook);
-removeButton.forEach((element, i) => element.addEventListener('click', Book.removeBook))
+removeButton.forEach((element, i) => element.addEventListener('click', Book.removeBook,))
 
