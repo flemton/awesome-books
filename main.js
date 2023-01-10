@@ -4,13 +4,12 @@ bookList.className = 'book-list';
 
 Books.forEach((Books) => {
   const book = `
-  <div class="bookContainer">
+    <div class="bookContainer">
         <p>
         ${Books.title} By ${Books.author}
         </p>
         <button class="remove">Remove</button>
-        <hr>
-        </div>`;
+    </div>`;
   bookList.innerHTML += book;
 });
 

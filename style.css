@@ -1,3 +1,38 @@
-.something {
+body {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.book-list {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  border: 2px solid black;
+  padding: 5px;
+  width: 100%;
+}
+
+.bookContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+hr {
+  width: 5%;
+  margin: 15px;
+}
+
+#add-book {
+  position: relative;
+  left: 155px;
+}
+
+#title {
+  width: 185px;
+}
+
+#author {
+  width: 185px;
 }
