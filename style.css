@@ -11,12 +11,24 @@ body {
   box-sizing: border-box;
   border: 2px solid black;
   padding: 5px;
-  width: 100%;
+  width: 40%;
 }
 
 .bookContainer {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 2px;
+  height: 20px;
+}
+
+button, #add-book {
+  border: 0;
+}
+
+.remove {
+  width: 80px;
+  height: 20px;
 }
 
 hr {
