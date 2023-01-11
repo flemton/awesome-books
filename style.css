@@ -4,31 +4,43 @@ body {
   align-items: center;
 }
 
-
 .book-list {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
   border: 2px solid black;
-  padding: 5px;
   width: 40%;
 }
 
-.bookContainer {
+.bookContainer,
+.bookContainer1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2px;
   height: 20px;
+  padding: 2px 5px;
+  background: rgb(214, 214, 214);
 }
 
-button, #add-book {
-  border: 0;
+.bookContainer1 {
+  background: white;
+}
+
+h2 {
+  margin: 0 0 10px;
+}
+
+button,
+#add-book,
+input {
+  padding: 3px;
+  background: white;
+  border: 2px solid black;
 }
 
 .remove {
-  width: 80px;
-  height: 20px;
+  width: 65px;
+  height: 22px;
 }
 
 hr {
