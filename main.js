@@ -30,6 +30,8 @@ window.addEventListener('DOMContentLoaded', () => {
   }
   formsLink.addEventListener('click', showFormOnly);
 });
+const date = new Date().toDateString();
+document.getElementById("date").innerHTML = date;
 const Books = JSON.parse(localStorage.getItem('Books')) || [];
 const bookList = document.createElement('section');
 bookList.className = 'book-list';
