@@ -74,3 +74,8 @@ hr {
 .hide {
   display: none;
 }
+
+.footer {
+  position:relative;
+  left: -218px;
+}
