@@ -1,6 +1,8 @@
+
 const Books = JSON.parse(localStorage.getItem('Books')) || [];
 const bookList = document.createElement('section');
 bookList.className = 'book-list';
+bookList.classList.add('show');
 let bookIndex = 0;
 
 Books.forEach((Books) => {
@@ -19,7 +21,7 @@ Books.forEach((Books) => {
   bookIndex += 1;
 });
 
-document.body.insertBefore(bookList, document.body.children[1]);
+document.body.insertBefore(bookList, document.body.children[2]);
 
 const addButton = document.querySelector('#add-book');
 const removeButton = document.querySelectorAll('.remove');

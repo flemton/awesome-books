@@ -4,6 +4,16 @@ body {
   align-items: center;
 }
 
+.nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-sizing: border-box;
+  border: 2px solid black;
+  width: 40%;
+  margin: 2px;
+}
+
 .book-list {
   display: flex;
   flex-direction: column;
@@ -59,4 +69,8 @@ hr {
 
 #author {
   width: 185px;
+}
+
+.hide {
+  display: none;
 }
