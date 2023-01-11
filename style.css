@@ -1,3 +1,62 @@
-.something {
+body {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.book-list {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  border: 2px solid black;
+  width: 40%;
+}
+
+.bookContainer,
+.bookContainer1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 20px;
+  padding: 2px 5px;
+  background: rgb(214, 214, 214);
+}
+
+.bookContainer1 {
+  background: white;
+}
+
+h2 {
+  margin: 0 0 10px;
+}
+
+button,
+#add-book,
+input {
+  padding: 3px;
+  background: white;
+  border: 2px solid black;
+}
+
+.remove {
+  width: 65px;
+  height: 22px;
+}
+
+hr {
+  width: 5%;
+  margin: 15px;
+}
+
+#add-book {
+  position: relative;
+  left: 155px;
+}
+
+#title {
+  width: 185px;
+}
+
+#author {
+  width: 185px;
 }
