@@ -31,7 +31,7 @@ window.addEventListener('DOMContentLoaded', () => {
   formsLink.addEventListener('click', showFormOnly);
 });
 const date = new Date().toDateString();
-document.getElementById("date").innerHTML = date;
+document.getElementById('date').innerHTML = date;
 const Books = JSON.parse(localStorage.getItem('Books')) || [];
 const bookList = document.createElement('section');
 bookList.className = 'book-list';
@@ -54,7 +54,7 @@ Books.forEach((Books) => {
   bookIndex += 1;
 });
 
-document.body.insertBefore(bookList, document.body.children[2]);
+document.body.insertBefore(bookList, document.body.children[3]);
 
 const addButton = document.querySelector('#add-book');
 const removeButton = document.querySelectorAll('.remove');

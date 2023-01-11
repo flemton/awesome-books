@@ -21,14 +21,19 @@ a {
   color: black;
 }
 
-a:active, a:hover {
+a:active,
+a:hover {
   color: blue;
 }
-
 
 .lined {
   border-right: 2px solid black;
   padding-right: 5px;
+}
+
+#date {
+  position: relative;
+  left: 200px;
 }
 
 .book-list {
@@ -99,4 +104,3 @@ hr {
   margin: 20px 0;
   padding-left: 12px;
 }
-
