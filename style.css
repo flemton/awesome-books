@@ -4,6 +4,38 @@ body {
   align-items: center;
 }
 
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  border: 2px solid black;
+  padding: 0 12px;
+  width: 40%;
+  margin: 2px;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+}
+
+a:active,
+a:hover {
+  color: blue;
+}
+
+.lined {
+  border-right: 2px solid black;
+  padding-right: 5px;
+}
+
+#date {
+  position: relative;
+  left: 200px;
+}
+
 .book-list {
   display: flex;
   flex-direction: column;
@@ -59,4 +91,16 @@ hr {
 
 #author {
   width: 185px;
+}
+
+.hide {
+  display: none;
+}
+
+.footer {
+  box-sizing: border-box;
+  border: 2px solid black;
+  width: 40%;
+  margin: 20px 0;
+  padding-left: 12px;
 }
