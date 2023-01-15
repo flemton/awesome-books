@@ -70,26 +70,25 @@ class Book {
 
     const formAuthor = document.querySelector('#author');
     const bbook = new Book(formTitle.value, formAuthor.value);
-    if (formAuthor.value && formTitle.value) {
-      Books.push(bbook);
-
-      localStorage.setItem('Books', JSON.stringify(Books));
-      formAuthor.value = '';
-      formTitle.value = '';
-      window.location.reload();
-    }
+    Books.push(bbook);
+    document.body.children[3].appendChild(`
+      <div class="bookContainer">
+      <p>
+      ${formTitle.value} by ${formAuthor.value}
+      </p>
+      <button class="remove">Remove</button>
+      </div>`);
+    formAuthor.value = '';
+    formTitle.value = '';
+    localStorage.setItem('Books', JSON.stringify(Books));
   }
 
-  static removeBook(e) {
-    const bookTitle = (e.target.parentNode.children[0].innerHTML).split('by')[0].trim();
-    const bookAuthor = (e.target.parentNode.children[0].innerHTML).split('by')[1].trim();
+  static removeBook() {
     for (let i = 0; i < Books.length; i += 1) {
-      if (Books[i].title === bookTitle && Books[i].author === bookAuthor) {
-        Books.splice(i, 1);
-        localStorage.setItem('Books', JSON.stringify(Books));
-        window.location.reload();
-        break;
-      }
+      Books.splice(i, 1);
+      localStorage.setItem('Books', JSON.stringify(Books));
+      window.location.reload();
+      break;
     }
   }
 }
