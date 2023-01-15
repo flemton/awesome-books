@@ -9,17 +9,14 @@
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
   - [Install](#install)
-  - [Usage](#usage)
-  - [Run tests](#run-tests)
-  - [Deployment](#triangular_flag_on_post-deployment)
 - [👥 Authors](#authors)
-- - Acknowledgements
+- [Acknowledgements](#acknowledgements)
 - [🔭 Future Features](#future-features)
 - [📝 License](#license)
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [awesome-books] <a name="about-project"></a>
+# 📖 [Awesome-books] <a name="about-project"></a>
 
 **[technothirst]** is the webpage representing a booklist. In these webpage you can add your books and remove a book also from the list. The booklist will persist as long as the browser session as localstorage has been used here.  
 
@@ -67,9 +64,8 @@ Clone this repository to your desired folder:
 
 ```sh
   cd my-folder
-  git clone https://github.com/sajibarafatsiddiqui/technothirst.git
+  git clone https://github.com/flemton/awesome-books.git
 ```
---->
 
 ### Install
 
@@ -96,7 +92,6 @@ Install this project with:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-> Describe 1 - 3 features you will add to the project.
 
 - [ ] **[new_feature_1]** WIll make the booklist persist using database in future
 
@@ -107,8 +102,6 @@ Install this project with:
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-> Give credit to everyone who inspired your codebase.
-
 Thanks to my coding partner Sajib for collaboration.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -118,7 +111,5 @@ Thanks to my coding partner Sajib for collaboration.
 ## 📝 License <a name="license"></a>
 
 This project is [MIT](./LICENSE) licensed.
-
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

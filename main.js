@@ -71,11 +71,16 @@ class Book {
     const formAuthor = document.querySelector('#author');
     const bbook = new Book(formTitle.value, formAuthor.value);
       Books.push(bbook);
-
-      localStorage.setItem('Books', JSON.stringify(Books));
+      document.body.children[3].appendChild(`
+      <div class="bookContainer">
+      <p>
+      ${formTitle.value} by ${formAuthor.value}
+      </p>
+      <button class="remove">Remove</button>
+      </div>`);
       formAuthor.value = '';
       formTitle.value = '';
-      window.location.reload();
+      localStorage.setItem('Books', JSON.stringify(Books));
   }
 
   static removeBook(e) {
